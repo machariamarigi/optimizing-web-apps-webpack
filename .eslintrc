@@ -8,5 +8,8 @@
       2,
       "nofunc"
     ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
   }
 }
