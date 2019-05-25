@@ -1,0 +1,252 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.8.3",
+  "hash": "65f6cee30792a5bfa6a2",
+  "time": 83,
+  "builtAt": 1527019105563,
+  "publicPath": "",
+  "outputPath": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/dist",
+  "assetsByChunkName": {
+    "main": "app.bundle.js"
+  },
+  "assets": [
+    {
+      "name": "app.bundle.js",
+      "size": 4550,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        "main"
+      ],
+      "assets": [
+        "app.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        "main"
+      ],
+      "assets": [
+        "app.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": "main",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 955,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "app.bundle.js"
+      ],
+      "hash": "d2f2ecabfeff2cdc2fac",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "./app/app.js",
+          "identifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+          "name": "./app/app.js",
+          "index": 0,
+          "index2": 1,
+          "size": 88,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+              "loc": "main"
+            }
+          ],
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "import \"./klondike/scoring\";\n\nangular.module(\"solitaire\", [\"klondike\", \"ngDraggable\"]);\n"
+        },
+        {
+          "id": "./app/klondike/scoring.js",
+          "identifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/klondike/scoring.js",
+          "name": "./app/klondike/scoring.js",
+          "index": 1,
+          "index2": 0,
+          "size": 867,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+          "issuerId": "./app/app.js",
+          "issuerName": "./app/app.js",
+          "issuerPath": [
+            {
+              "id": "./app/app.js",
+              "identifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+              "name": "./app/app.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./app/app.js",
+              "moduleIdentifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+              "module": "./app/app.js",
+              "moduleName": "./app/app.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./klondike/scoring",
+              "loc": "1:0-28"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "angular.module(\"klondike.scoring\", [])\n  .service(\"scoring\", [function Scoring() {\n    \"use strict\";\n\n    this.score = 0;\n\n    this.newGame = function () {\n      this.score = 0;\n    };\n    this.tableauCardTurnedUp = function () {\n      this.score += 5;\n    };\n    this.dropped = function (source, destionation) {\n      this.score += scoreForMoving(source, destionation) || 0;\n    };\n    this.wasteRecycled = function () {\n      this.score = Math.max(this.score - 100, 0);\n    };\n\n    function scoreForMoving(source, destionation) {\n      if (destionation.name === \"TableauPile\") {\n        if (source.name === \"FoundationPile\") {\n          return -15;\n        }\n        return 5;\n      }\n      if (destionation.name === \"FoundationPile\") {\n        if (source.name === \"TableauPile\" || source.name === \"WastePile\") {\n          return 10;\n        }\n      }\n    }\n  }]);\n"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "./app/app.js",
+      "identifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+      "name": "./app/app.js",
+      "index": 0,
+      "index2": 1,
+      "size": 88,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+          "loc": "main"
+        }
+      ],
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "import \"./klondike/scoring\";\n\nangular.module(\"solitaire\", [\"klondike\", \"ngDraggable\"]);\n"
+    },
+    {
+      "id": "./app/klondike/scoring.js",
+      "identifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/klondike/scoring.js",
+      "name": "./app/klondike/scoring.js",
+      "index": 1,
+      "index2": 0,
+      "size": 867,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+      "issuerId": "./app/app.js",
+      "issuerName": "./app/app.js",
+      "issuerPath": [
+        {
+          "id": "./app/app.js",
+          "identifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+          "name": "./app/app.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./app/app.js",
+          "moduleIdentifier": "/Users/marigi/Projects/optimizing-web-apps-webpack/app/app.js",
+          "module": "./app/app.js",
+          "moduleName": "./app/app.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./klondike/scoring",
+          "loc": "1:0-28"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "angular.module(\"klondike.scoring\", [])\n  .service(\"scoring\", [function Scoring() {\n    \"use strict\";\n\n    this.score = 0;\n\n    this.newGame = function () {\n      this.score = 0;\n    };\n    this.tableauCardTurnedUp = function () {\n      this.score += 5;\n    };\n    this.dropped = function (source, destionation) {\n      this.score += scoreForMoving(source, destionation) || 0;\n    };\n    this.wasteRecycled = function () {\n      this.score = Math.max(this.score - 100, 0);\n    };\n\n    function scoreForMoving(source, destionation) {\n      if (destionation.name === \"TableauPile\") {\n        if (source.name === \"FoundationPile\") {\n          return -15;\n        }\n        return 5;\n      }\n      if (destionation.name === \"FoundationPile\") {\n        if (source.name === \"TableauPile\" || source.name === \"WastePile\") {\n          return 10;\n        }\n      }\n    }\n  }]);\n"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}
