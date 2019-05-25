@@ -1,3 +1,5 @@
+import * as buildInformation from './build-information.gen';
+
 (function () {
   "use strict";
 
@@ -14,6 +16,7 @@
       klondikeGame.newGame();
       $scope.game = klondikeGame;
       $scope.scoring = scoring;
+      $scope.buildInformation = buildInformation;
     }])
     .directive("sNoPile", function () {
       return {
